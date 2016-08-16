@@ -41,9 +41,10 @@ def main():
     #if you want a simple output of first name, last name, just use this line:
     #return athlete.firstname + ' ' + athlete.lastname
     #now get most recent activity for this athlete...
+    print 'athlete:', athlete.firstname, athlete.lastname
     names = []
     maps = []
-    for a in client.get_activities(before = "2016-08-12T00:00:00Z",  limit=1):
+    for a in client.get_activities(before = "2016-08-16T00:00:00Z",  limit=1):
         names.append(a.name)
         maps.append(a.map)
     # another simple output for this bit is to return the name of the route
